@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- cdn for stripe library -->
+  <script src="https://js.stripe.com/v3/"></script>
+
+  <script>
+    // use client-side test api key
+    var stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+
+    // immediately redirect to stripe using your checkout session
+    stripe.redirectToCheckout({
+      sessionId: 'cs_test_a1pG0rbEXWrzKpQoR3qCi4NO9VzgjFfRtAdviICLGJH1f1MbVgIhTmilvj'
+    });
+  </script>
+</body>
+</html>
+
+price_1IBlcv2eZvKYlo2CQ1pKaMAg
+
+product id 6005c27127d3ce48cc79eef9
+
+  "_id": "6005c27127d3ce48cc79eef9"
+      },
+      {
+        "_id": "6005c27127d3ce48cc79eefa"
+      },
+      {
+        "_id": "6005c27127d3ce48cc79eefb"
+      },
+      {
+        "_id": "6005c27127d3ce48cc79eefc"
+      },
+      {
+        "_id": "6005c27127d3ce48cc79eefd"
+      },
+      {
+        "_id": "6005c27127d3ce48cc79eefe"
+      },
+      {
+        "_id": "6005c27127d3ce48cc79eeff"
+      },
+      {
+        "_id": "6005c27127d3ce48cc79ef00"
+      },
+      {
+        "_id": "6005c27127d3ce48cc79ef01"
+      },
+      {
+        "_id": "6005c27127d3ce48cc79ef02"
+      },
+      {
+        "_id": "6005c27127d3ce48cc79ef03"
+      },
+      {
+        "_id": "6005c27127d3ce48cc79ef04"
+      }
+    ]
+  }
+}
