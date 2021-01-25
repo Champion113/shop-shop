@@ -25,7 +25,7 @@ A shopping app that use Redux to manage global state instead of the Context API 
 
 ## Screenshots
 
-![Screenshot](client\public\images\screenshot.png)
+![Screenshot](client\public\images\screenshot.jpg)
 
 
 ## License 
