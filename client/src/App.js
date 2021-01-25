@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
- import { ApolloProvider } from '@apollo/react-hooks';
- import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from '@apollo/react-hooks';
+import ApolloClient from 'apollo-boost';
 
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
@@ -10,8 +10,9 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Nav from "./components/Nav";
 // import { StoreProvider } from "./utils/GlobalState";
+import Success from "./pages/Success";
 import OrderHistory from "./pages/OrderHistory";
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 import store from './utils/store';
 
 const client = new ApolloClient({
@@ -29,7 +30,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-       <Router>
+      <Router>
         <div>
           <Provider store={store}>
             <Nav />
@@ -44,11 +45,10 @@ function App() {
             </Switch>
           </Provider>
         </div>
-       </Router>
-     </ApolloProvider>
+      </Router>
+    </ApolloProvider>
+
   );
-          }
+}
 
 export default App;
-
-
