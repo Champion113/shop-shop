@@ -3,20 +3,21 @@ import { useQuery } from '@apollo/react-hooks';
 // import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from '../../utils/actions';
 import { QUERY_CATEGORIES } from '../../utils/queries';
+import { idbPromise } from '../../utils/helpers';
 import {useSelector, useDispatch} from 'react-redux';
-import {idbPromise} from '../../utils/helpers'
 
 function CategoryMenu() {
   // const [state, dispatch] = useStoreContext();
-
-  // const { categories } = state;
-
-  // const { data: categoryData } = useQuery(QUERY_CATEGORIES);
+  const state = useSelector((state) => {
+  return state
+});
 const dispatch = useDispatch();
-const categories = useSelector(state => state.categories);
-const {loading, data: categoryData} = useQuery(QUERY_CATEGORIES);
- 
-useEffect(() => {
+
+  const { categories } = state;
+
+  const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
+
+  useEffect(() => {
     if (categoryData) {
       dispatch({
         type: UPDATE_CATEGORIES,
@@ -38,7 +39,7 @@ useEffect(() => {
   const handleClick = id => {
     dispatch({
       type: UPDATE_CURRENT_CATEGORY,
-      currentCategory: id,
+      currentCategory: id
     });
   };
 
